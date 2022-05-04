@@ -3,10 +3,10 @@
   <h2>Medlemsinfo</h2>
   <section class="member-info">
     <h3>Namn: <%= name %></h3>
-    <p>Email: <%= email %></p>
+    <p>E-post: <%= email %></p>
     <p>Telefonnummer <%= phone %></p>
     <p>Datum: <%= date %></p>
-    <p>Övrigt: <%= other %></p>
+    <p>Övrig info/favoritdrink: <%= other %></p>
 
   </section>
   <form action="/member/delete/<%= _id %>" method="post">
@@ -27,7 +27,7 @@
         <label for="date">Datum:</label>
         <input type="date" id="date" name="date" value="<%= date %>" required>
        
-        <label for="other">Övrig info:</label>
+        <label for="other">Övrig info/favoritdrink:</label>
         <input type="text" id="other" name="other" value="<%= other %>">
         
         <button class="btn">Uppdatera Information</button>
