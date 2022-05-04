@@ -1,0 +1,17 @@
+<%- include ("header") %>
+<main>
+    <h2>Medlemslista</h2>
+<a  class="btn"href="/members/sort/asc">Sortera A-Ö</a>
+<a class="btn"href="/members/sort/desc">Sortera Ö-A</a>
+<a class="btn"href="/members">Default sortering</a>
+
+    <ul>
+        
+        <% members.forEach(member => {%>
+            <a class="member" href="/member/<%= member._id %>">
+            <li><%= member.name%></li>
+        </a>
+        <% }) %>
+    </ul>
+</main>
+    <%- include ("footer") %>
