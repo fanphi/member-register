@@ -1,5 +1,6 @@
 <%- include ("header") %>
-    <h1><%= name %></h1>
+<main>
+    <h2><%= name %></h1>
     <p><%= email %></p>
     <p><%= phone %></p>
     <p><%= date %></p>
@@ -8,25 +9,25 @@
         <button class="btn">Ta bort medlem</button>
     </form>
    
-<h2>Uppdatera Information</h2>
+<h3>Uppdatera Information</h2>
     <form action="/member/update/<%= _id %>" method="post">
         <label for="name">Namn:</label>
         <input type="text" id="name" name="name" value="<%= name %>" required>
-        <br>
+        
         <label for="email">E-post:</label>
         <input type="email" id="email" name="email" value="<%= email %>" required>
-        <br>
+       
         <label for="phone">Telefonnummer:</label>
         <input type="number" id="phone" name="phone" value="<%= phone %>" required>
-        <br>
+        
         <label for="date">Datum:</label>
         <input type="date" id="date" name="date" value="<%= date %>" required>
-        <br>
+       
         <label for="other">Favoritdrink/ övrig info:</label>
-        <input type="text" id="text" name="text" value="<%= other %>">
-        <br>
+        <input type="text" id="other" name="other" value="<%= other %>">
+        
         <button class="btn">Uppdatera Information</button>
       </form>
-    
+    </main>
 
     <%- include ("footer") %>
