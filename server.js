@@ -77,10 +77,12 @@ app.get('/members', async (req, res) => {
 });
 });
 
-app.post('/member/delete/:id', async (req, res) => {
+
+app.get('/member/delete/:id', async (req, res) => {
     await membersCollection.deleteOne({_id: ObjectId (req.params.id)})
     res.redirect('/members')
   });
+
 
 
 

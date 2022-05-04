@@ -9,9 +9,7 @@
     <p>Övrig info/favoritdrink: <%= other %></p>
 
   </section>
-  <form action="/member/delete/<%= _id %>" method="post">
-    <button class="btn">Ta bort medlem</button>
-</form>
+<a class="btn" href="/member/delete/<%= _id %>">Radera medlem</a>
 <section>
 <h2>Uppdatera Information</h2>
     <form action="/member/update/<%= _id %>" method="post">
