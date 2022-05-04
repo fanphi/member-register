@@ -5,6 +5,7 @@
 nav{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 1%;
 }
 .nav{
     text-decoration: none;
@@ -77,6 +78,16 @@ footer{
     border-radius: 5px;
     font-weight: bolder;
     font-size: medium;
+}
+
+.member-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+.start{
+    text-align: center;
 }
 
 .btn:hover{
