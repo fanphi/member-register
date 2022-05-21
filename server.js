@@ -60,14 +60,14 @@ app.get('/members', async (req, res) => {
   });
   
   app.post('/members/create', async (req, res) => {
-    await membersCollection.insertOne(req.body);
+    await membersCollection.insertOne({name: req.body.name, email: req.body.email, phone: req.body.phone, date: new Date(req.body.date), other: req.body.other });
     res.redirect('/members');
   });
 
 
   //uppdatera medlem
   app.post('/member/update/:id', async (req, res) => {
-    await membersCollection.updateOne({_id: ObjectId(req.params.id)}, {$set:{name: req.body.name, email: req.body.email, phone: req.body.phone, date: req.body.date, other: req.body.other }});
+    await membersCollection.updateOne({_id: ObjectId(req.params.id)}, {$set:{name: req.body.name, email: req.body.email, phone: req.body.phone, date: new Date(req.body.date), other: req.body.other }});
     res.redirect('/members');
   });
 
